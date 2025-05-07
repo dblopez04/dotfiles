@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/daniel/.config/wpg/wallpapers/garden-at-arles.png",
+    "alpha": "100",
+
+    "special": {
+        "background": "#141813",
+        "foreground": "#cecebb",
+        "cursor": "#cecebb"
+    },
+    "colors": {
+        "color0": "#141813",
+        "color1": "#6E832C",
+        "color2": "#738966",
+        "color3": "#989122",
+        "color4": "#9C9866",
+        "color5": "#C4B361",
+        "color6": "#617C89",
+        "color7": "#cecebb",
+        "color8": "#909082",
+        "color9": "#6E832C",
+        "color10": "#738966",
+        "color11": "#989122",
+        "color12": "#9C9866",
+        "color13": "#C4B361",
+        "color14": "#617C89",
+        "color15": "#cecebb"
+    }
+}

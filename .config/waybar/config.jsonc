@@ -1,0 +1,40 @@
+{
+	"layer": "top",
+	"modules-left": ["hyprland/workspaces", "hyprland/mode"],
+	"modules-center": ["hyprland/window"],
+	"modules-right": ["custom/media","pulseaudio","tray", "clock"],
+	"hyprland/window": {
+		"max-length": 50
+	},
+	"hyprland/workspaces": {
+		"persistent-workspaces": {
+			"1": [],
+			"2": [],
+			"3": [],
+			"4": [],
+			"5": [],
+			"6": [],			
+		}	
+	},
+	"custom/media": {
+	    "exec": "/usr/bin/python3 /home/daniel/.config/waybar/mediaplayer.py",
+	    "format": "{}",
+	    "return-type": "json",
+  	},
+	"pulseaudio": {
+		"format": "{icon}  {volume:2}%",
+		"format-icons": {
+			"headphones": "",
+			"default": [
+				"",
+				""
+			]
+		},
+		"on-click": "pavucontrol"
+	},
+	"clock": {
+		"format": "{:%a %d %b %I:%M %p}",
+        	"tooltip": false
+	}
+	
+}

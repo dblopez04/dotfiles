@@ -1,0 +1,40 @@
+* {
+  font-family: "JetBrainsMono Nerd Font", sans-serif;
+  font-size: 13px;
+  color: #cecebb;
+  background: #141813;
+  border: none;
+}
+
+#custom-media,
+#pulseaudio,
+#tray,
+#clock {
+  padding: 0 10px;
+  margin: 6px 3px;
+  color: #cecebb;
+  background: #141813;
+    
+}
+
+#workspaces button {
+	all: unset;
+	border: none;
+	padding: 0 10px;
+	margin: 0 4px;
+	font-family: "JetBrainsMono Nerd Font", sans-serif;
+}
+
+
+#workspaces button:hover {
+	border-radius: 0 0 0 0;
+	border-bottom: 2px solid #cecebb;
+}
+
+
+#workspaces button.active {
+	border-radius: 0 0 0 0;
+	border-bottom: 2px solid #cecebb;
+	font-weight: bold;
+}
+

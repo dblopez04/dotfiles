@@ -1,0 +1,17 @@
+"custom/media": {
+    "exec": "/usr/bin/python3 /home/daniel/.config/waybar/mediaplayer.py",
+    "format": "{}",
+    "return-type": "json",
+    "on-click": "playerctl play-pause",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous"
+  }
+
+
+
+#custom-media {
+  padding: 0 10px;
+  margin: 0 4px;
+  color: #cecebb;
+  background: #141813;
+}
