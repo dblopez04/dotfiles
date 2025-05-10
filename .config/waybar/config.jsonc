@@ -2,7 +2,7 @@
 	"layer": "top",
 	"modules-left": ["hyprland/workspaces", "hyprland/mode"],
 	"modules-center": ["hyprland/window"],
-	"modules-right": ["custom/media","pulseaudio","tray", "clock"],
+	"modules-right": ["custom/media","pulseaudio","tray", "clock","custom/power"],
 	"hyprland/window": {
 		"max-length": 50
 	},
@@ -35,6 +35,10 @@
 	"clock": {
 		"format": "{:%a %d %b %I:%M %p}",
         	"tooltip": false
+	},
+	"custom/power": {
+		"format": "",
+		"tooltip": false,
+		"on-click": "nwg-bar",
 	}
-	
 }
