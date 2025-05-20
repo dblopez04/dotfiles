@@ -1,20 +1,22 @@
+@import url("colors.css");
+
 * {
   font-family: "JetBrainsMono Nerd Font", sans-serif;
-  font-size: 13px;
-  color: #cecebb;
-  background: #141813;
+  font-size: 20px;
+  color: @color2;
+  background: @color0;
   border: none;
 }
 
-#custom-media,
+#custom-dexcom,
+#network,
+#backlight,
 #pulseaudio,
-#tray,
+#battery,
 #clock,
 #custom-power {
   padding: 0 10px;
-  margin: 3px 3px;
-  color: #cecebb;
-  background: #141813;
+  margin: 5px 5px;
     
 }
 
@@ -29,13 +31,12 @@
 
 #workspaces button:hover {
 	border-radius: 0 0 0 0;
-	border-bottom: 2px solid #cecebb;
+	border-bottom: 4px solid @color2;
 }
 
 
 #workspaces button.active {
 	border-radius: 0 0 0 0;
-	border-bottom: 2px solid #cecebb;
+	border-bottom: 4px solid @color2;
 	font-weight: bold;
 }
-

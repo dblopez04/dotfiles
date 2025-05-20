@@ -1,4 +1,4 @@
-(cat $HOME/.config/wpg/sequences &)
+(cat ~/.cache/wal/sequences &)
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
@@ -106,13 +106,14 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 if [[ $- == *i* ]]; then
-    neofetch --source /home/daniel/ascii/afx.txt
+    fastfetch --host-format "ThinkPad T480s" --cpu-format "{name}" --wm-format "Hyprland 0.49.0" --logo-type small	
 fi
 
 
 eval "$(starship init zsh)"
 
-alias neofetch='neofetch --source /home/daniel/ascii/afx.txt'
-alias keybinds='~/.config/keybinds-help.sh'
+alias fastfetch='fastfetch --host-format "ThinkPad T480s" --cpu-format "{name}" --wm-format "Hyprland 0.49.0" --logo-type small'
+alias v='nvim'
 
+export MANPAGER='nvim +Man!'
 export PATH=$PATH:/home/daniel/.spicetify
