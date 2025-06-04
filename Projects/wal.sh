@@ -5,7 +5,8 @@ img=$1
 wal -i $img
 
 pkill waybar
-waybar & disown
+waybar &
+disown
 
 # set wallpaper
 sed -E -i "0,/^preload/ s|^preload *=.*|preload = ${img}|" "$HOME/.config/hypr/hyprpaper.conf"
@@ -14,12 +15,12 @@ pkill hyprpaper
 hyprpaper &
 disown
 
-sed -i "2c\$wallpaper = ${img}" "$HOME/.config/hypr/hyprlock.conf"
+# sed -i "2c\$wallpaper = ${img}" "$HOME/.config/hypr/hyprlock.conf"
 
 # update gtk colors
-cp -f $HOME/.cache/wal/colors-oomox $HOME/.config/oomox/colors
-cd $HOME/oomox-gtk-theme/
-./change_color.sh $HOME/.cache/wal/colors-oomox -o oomox-colors-oomox -t $HOME/.themes/
+# cp -f $HOME/.cache/wal/colors-oomox $HOME/.config/oomox/colors
+# cd $HOME/oomox-gtk-theme/
+# ./change_color.sh $HOME/.cache/wal/colors-oomox -o oomox-colors-oomox -t $HOME/.themes/
 
 # update firefox colors
 pywalfox update
@@ -29,7 +30,6 @@ cp $HOME/.cache/wal/colors-spicetify.ini $HOME/.config/spicetify/Themes/text/col
 spicetify apply
 
 # update discord colors
-cp $HOME/.cache/wal/colors-discord.css $HOME/.config/vesktop/themes/colors-discord.css
 
 clear
 echo " Wallpaper changed to $img"

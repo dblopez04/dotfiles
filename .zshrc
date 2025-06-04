@@ -1,4 +1,16 @@
 (cat ~/.cache/wal/sequences &)
+if [[ $- == *i* ]]; then
+	neofetch --source /home/daniel/ascii/afx.txt
+fi
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+
+
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
@@ -10,7 +22,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -105,15 +117,17 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
-if [[ $- == *i* ]]; then
-    fastfetch --host-format "ThinkPad T480s" --cpu-format "{name}" --wm-format "Hyprland 0.49.0" --logo-type small	
-fi
 
 
-eval "$(starship init zsh)"
 
-alias fastfetch='fastfetch --host-format "ThinkPad T480s" --cpu-format "{name}" --wm-format "Hyprland 0.49.0" --logo-type small'
+
+
+alias neofetch='neofetch --source /home/daniel/ascii/afx.txt'
 alias v='nvim'
 
 export MANPAGER='nvim +Man!'
 export PATH=$PATH:/home/daniel/.spicetify
+export PATH=/home/daniel/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/home/daniel/.local/share/flatpak/exports/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/daniel/.spicetify
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
