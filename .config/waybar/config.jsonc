@@ -1,9 +1,8 @@
 {
 	"reload_style_on_change": true,
 	"layer": "top",
-	"modules-left": ["hyprland/workspaces", "hyprland/mode"],
-	"modules-center": ["hyprland/window"],
-	"modules-right": ["custom/media","pulseaudio","tray", "clock","custom/power"],
+	"modules-left": ["hyprland/workspaces"],
+	"modules-right": ["mpris", "tray", "pulseaudio", "clock", "custom/power"],
 	"hyprland/window": {
 		"max-length": 50
 	},
@@ -18,12 +17,15 @@
 		}	
 	},
 	"custom/media": {
-	    "exec": "/usr/bin/python3 /home/daniel/.config/waybar/mediaplayer.py",
-	    "format": "{}",
-	    "return-type": "json",
+		"exec": "~/.config/waybar/media.sh",
+		"interval": 2,
+		"return-type": "json",
+		"on-click": "playerctl play-pause",
+		"max-length": 50
   	},
 	"pulseaudio": {
 		"format": "{icon}  {volume:2}%",
+		"format-muted": "",
 		"format-icons": {
 			"headphones": "",
 			"default": [
@@ -31,15 +33,29 @@
 				""
 			]
 		},
-		"on-click": "pavucontrol"
+		"on-click": "pavucontrol",
+		"on-click-right": "pactl set-sink-mute $(pactl get-default-sink) toggle"
 	},
 	"clock": {
-		"format": "{:%a %d %b %I:%M %p}",
+		"format": "{:%a %b %d %I:%M %p}",
         	"tooltip": false
 	},
 	"custom/power": {
-		"format": "",
+		"format": "",
 		"tooltip": false,
 		"on-click": "nwg-bar",
+	},
+
+	"mpris": {
+		"format": "{player_icon} {artist} - {title}",
+		"format-paused": "{status_icon} <i>{artist} - {title}</i>",
+		"player-icons": {
+			"default": "▶",
+			"mpv": "🎵"
+		},
+		"status-icons": {
+			"paused": "⏸"
+		},
+		"max-length": 50,
 	}
 }

@@ -131,3 +131,7 @@ export PATH=/home/daniel/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/hom
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+[ -f ~/fzfrc ] && source ~/fzfrc
+
+eval "$(zoxide init zsh)"

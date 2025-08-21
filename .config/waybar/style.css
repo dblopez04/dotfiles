@@ -1,20 +1,21 @@
 @import url("colors.css");
 
 * {
-  font-family: "JetBrainsMono Nerd Font", sans-serif;
-  font-size: 13px;
-  color: @color2;
-  background: @color0;
-  border: none;
+	font-family: "JetBrainsMono Nerd Font", sans-serif;
+	font-size: 14px;
+	color: @color2;
+	background: @color0;
+	border: none;
 }
 
 #custom-media,
 #pulseaudio,
 #tray,
 #clock,
-#custom-power {
-  padding: 0 10px;
-  margin: 3px 3px;
+#custom-power,
+#mpris {
+	padding: 0 10px;
+	margin: 3px 3px;
 }
 
 #workspaces button {
