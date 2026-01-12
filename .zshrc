@@ -135,3 +135,18 @@ export PATH=/home/daniel/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/hom
 [ -f ~/fzfrc ] && source ~/fzfrc
 
 eval "$(zoxide init zsh)"
+
+# pnpm
+export PNPM_HOME="/home/daniel/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+# bun completions
+[ -s "/home/daniel/.bun/_bun" ] && source "/home/daniel/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
