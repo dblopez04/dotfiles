@@ -12,16 +12,17 @@ waybar &
 disown
 
 # set wallpaper
-sed -E -i "0,/^preload/ s|^preload *=.*|preload = ${img}|" "$HOME/.config/hypr/hyprpaper.conf"
-sed -E -i "s|^wallpaper *= *,.*|wallpaper = ,${img}|" "$HOME/.config/hypr/hyprpaper.conf"
-pkill hyprpaper
-hyprpaper &
-disown
+# sed -E -i "0,/^preload/ s|^preload *=.*|preload = ${img}|" "$HOME/.config/hypr/hyprpaper.conf"
+# sed -E -i "s|^wallpaper *= *,.*|wallpaper = ,${img}|" "$HOME/.config/hypr/hyprpaper.conf"
+# pkill hyprpaper
+# hyprpaper &
+# disown
 
 # sed -i "2c\$wallpaper = ${img}" "$HOME/.config/hypr/hyprlock.conf"
 
 # update gtk colors
 oomox-cli ~/.cache/wal/colors-oomox
+gsettings set org.gnome.desktop.interface gtk-theme 'oomox-colors-oomox'
 
 # update firefox colors
 pywalfox update
